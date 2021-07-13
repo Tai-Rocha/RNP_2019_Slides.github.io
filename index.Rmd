@@ -1,0 +1,255 @@
+---
+title: "Challenges of digital transformation in teaching and research"
+subtitle: "Connecting data and experiences: Biodiversity, Information and Communication Technologies in Brazil"
+author: ""
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/grayscale.css", "css/fonts.css"]
+    seal: false 
+    lib_dir: libs
+    nature:
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+      highlightStyle: solarized-light
+      highlightLanguage: ["r", "css", "yaml"]
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "14:9" 
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3)
+library(xaringanExtra)
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+class: title-slide, center, bottom
+background-image: url(img/crane.jpg) 
+
+background-position: 50% 20%
+background-size: 10%
+background-color: #ffffff
+
+# `r rmarkdown::metadata$title`
+
+## `r rmarkdown::metadata$subtitle`
+
+<!--`r rmarkdown::metadata$author` · [alison.rbind.io](https://alison.rbind.io/)--> 
+
+
+---
+class: middle, center
+
+# What Am I Talk ?
+
+### 1-Ecological niche models, a currently popular approach <br />
+### 2-modleR <br />
+### 3-Computational challanges<br />
+
+---
+class: inverse, middle, center
+
+# What is Ecological niche models?
+
+---
+#### What is Ecological niche models? 
+
+```{r, echo=FALSE, out.width="55%", fig.align="center"}
+knitr::include_graphics("img/ENM_approach_1.png")
+```
+.pull-right[
+###### .center[... in a synthetic scheme and few words...]
+]
+
+---
+
+###### What is Ecological niche models? 
+
+```{r, echo=FALSE, out.width="100%", fig.align="center"}
+knitr::include_graphics("img/Georref_data.png")
+```
+
+---
+
+###### What is Ecological niche models? 
+
+```{r, echo=FALSE, out.width="100%", fig.align="center"}
+knitr::include_graphics("img/Variable_data.png")
+```
+
+---
+
+###### What is Ecological niche models? 
+
+```{r, echo=FALSE, out.width="100%", fig.align="center"}
+knitr::include_graphics("img/Variable_data.png")
+```
+
+---
+background-image: url(img/donut.png)
+background-size: cover
+class: middle, center
+
+# "Continuação da figura com esquema,<br> not free donuts."
+
+.pull-left[
+## .center[`r emo::ji("heavy_check_mark")`<br>`r fontawesome::fa("microphone-alt")`]
+]
+
+.pull-right[
+
+## .center[`r emo::ji("heavy_multiplication_x")`<br>`r fontawesome::fa("money-bill-alt")`]
+]
+
+???
+
+Richard Stallman summarized the nature of *libre* in a slogan that I'll adapt here
+
+Both meanings of free are relevant here!
+
+
+---
+class: middle
+
+# You as a user are "free" to...
+
+
+--
+
+1. .emphasis[RUN]<br>Run the program as you wish, for any purpose.
+
+--
+
+1. .emphasis[STUDY]<br>Study how the program works, and change it so it does your computing as you wish. Access to the source code is a precondition for this.
+
+--
+
+1. .emphasis[COPY & DISTRIBUTE]<br>Redistribute copies so you can help others.
+
+--
+
+1. .emphasis[CHANGE & IMPROVE]<br>Distribute copies of your modified versions to others. By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
+
+--
+
+.footnote[https://www.gnu.org/philosophy/free-sw.en.html#f1]
+
+---
+background-image: url(img/puppy.png)
+background-size: 60%
+background-position: bottom center
+class: top center
+
+
+# "Think free as in a free puppy?"
+
+
+---
+class: middle
+
+.pull-left[
+### Scientific & technical computing companies
+
+Some traditional leaders:
+
+- SAS Institute (SAS/JMP)
+
+- MathWorks (MATLAB)
+
+- Wolfram Research (Mathematica)
+
+- IBM (SPSS)
+]
+
+--
+
+.pull-right[
+### Open source tools for scientific and technical computing 
+
+- SageMath
+
+- GNU Octave (compatible with Matlab)
+
+- R 
+
+- Python / [Project Jupyter](https://jupyter.org/)
+
+- Julia
+]
+
+
+
+---
+background-image: url(img/cranes.jpg)
+background-position: left
+background-size: contain
+background-color: #ffffff
+class: middle
+
+.right-column[
+
+# Benefits of FLOSS
+
+- actual functionality
+
+- accessibility
+
+- resiliency
+
+- participatory
+
+- reproducibility
+]
+
+???
+
+A single software vendor is fundamentally incapable of keeping up with the breadth and depth of methodological innovation that occurs in science.
+
+---
+background-image: url(img/cranes.jpg)
+background-position: left
+background-size: contain
+background-color: #ffffff
+class: middle
+
+.right-column[
+
+# Reproducibility
+
+> "The baseline requirement for reproducibility is that I can run your software!"
+>
+> [J.J. Allaire](https://youtu.be/DskltmWKOVY)
+
+
+]
+
+---
+background-image: url(img/wvu.png)
+background-position: middle
+background-size: contain
+
+---
+background-image: url(img/wvu_shiny_walkthrough.png)
+background-position: left bottom
+background-size: 55%
+class: bottom, inverse
+
+## "Data Driven WV" helps support vaccine supply & demand with dashboards
+
+.pull-right[
+
+> "In the pandemic’s infancy, the process was done manually using Google Docs and Microsoft Excel spreadsheets."
+
+> "Their ability to use data to forecast PPE and track inventory for vaccines has allowed the state to be ready and nimble to shift with the unpredictable tides of the pandemic."
+]
+
+.footnote[[Article](https://www.wvnews.com/data-science-from-wvu-helping-support-vaccine-supply-demand/article_c5aa5c17-a015-58dd-9d4a-605164010d68.html), [video](https://www.youtube.com/watch?v=CYilc-rEgjg), [walk-through](https://www.youtube.com/watch?v=T2DzDs0ksZY)]
