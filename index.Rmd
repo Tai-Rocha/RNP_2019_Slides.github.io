@@ -191,7 +191,7 @@ knitr::include_graphics("img/modleR.png")
 ]
 --
 .pull-right[
-```{r, echo=FALSE, out.width="40%", fig.align="center"}
+```{r, echo=FALSE, out.width="40%", fig.align="right"}
 knitr::include_graphics("img/workflow_modleR.png")
 ```
 ]
