@@ -185,7 +185,7 @@ knitr::include_graphics("img/pcks.png")
 #### modleR: R package a workflow for ENMs
 
 .pull-left[
-```{r, echo=FALSE, out.width="20%", fig.align="center"}
+```{r, echo=FALSE, out.width="20%", fig.align="left"}
 knitr::include_graphics("img/modleR.png")
 ```
 ]
@@ -203,7 +203,7 @@ knitr::include_graphics("img/workflow_modleR.png")
 ## .center[`r fontawesome::fa("tv")`]
 ]
 --
-```{r, echo=FALSE, out.width="30%", fig.align='center'}
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
 knitr::include_graphics("img/shiny_modler.png")
 
 ```
