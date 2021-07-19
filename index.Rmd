@@ -272,8 +272,6 @@ class: middle
 
 .pull-right[
 
-## <br />
-
 - Help desk
 
 - Forums access
