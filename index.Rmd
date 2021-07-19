@@ -195,7 +195,10 @@ knitr::include_graphics("img/modleR.png")
 knitr::include_graphics("img/workflow_modleR.png")
 ```
 ]
---
+---
+### Part 2
+#### modleR: R package a workflow for ENMs
+
 .pull-left[ Shiny app
 ## .center[`r fontawesome::fa("tv")`]
 ]
@@ -204,7 +207,6 @@ knitr::include_graphics("img/workflow_modleR.png")
 knitr::include_graphics("img/shiny_modler.png")
 
 ```
-
 ---
 
 ### Part 3
