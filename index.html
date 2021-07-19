@@ -3,7 +3,7 @@
   <head>
     <title>Challenges of digital transformation in teaching and research</title>
     <meta charset="utf-8" />
-    <meta name="date" content="2021-07-12" />
+    <meta name="date" content="2021-07-19" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <script src="libs/clipboard/clipboard.min.js"></script>
@@ -23,10 +23,10 @@
 
 
 class: title-slide, center, bottom
-background-image: url(img/crane.jpg) 
+background-image: url(img/RNP_2019.png) 
 
-background-position: 50% 20%
-background-size: 10%
+background-position: 50% 10%
+background-size: 25%
 background-color: #ffffff
 
 # Challenges of digital transformation in teaching and research
@@ -39,197 +39,206 @@ background-color: #ffffff
 ---
 class: middle, center
 
-# What Am I Talk ?
+# What Will I Talk ?
 
-### 1-Ecological niche models, a currently popular approach &lt;br /&gt;
-### 2-modleR &lt;br /&gt;
-### 3-Computational challanges&lt;br /&gt;
+#### Part 1- Ecological niche models (ENMs) &lt;br /&gt;
+#### Part 2- modleR: R package a workflow for ENMs &lt;br /&gt;
+#### Part 3- Computational challenges&lt;br /&gt;
 
 ---
 class: inverse, middle, center
-
-# What is Ecological niche models?
+### Part 1
+#### What is Ecological niche model?
 
 ---
-#### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
 &lt;img src="img/ENM_approach_1.png" width="55%" style="display: block; margin: auto;" /&gt;
 .pull-right[
 ###### .center[... in a synthetic scheme and few words...]
 ]
 
-  
 ---
 
-###### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
 &lt;img src="img/Georref_data.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
-###### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
 &lt;img src="img/Variable_data.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
-background-image: url(img/donut.png)
-background-size: cover
-class: middle, center
 
-# "Continuação da figura com esquema,&lt;br&gt; not free donuts."
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+&lt;img src="img/algo_1.png" width="45%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+&lt;img src="img/algo_2.png" width="65%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+&lt;img src="img/algo_ENMS.png" width="95%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+&lt;img src="img/algo_G_space.png" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+- &lt;div style="text-align: justify"&gt;Although we can summarize the process in few steps to a better overall understanding, It's important to emphasize that for each step there are a set of other steps...&lt;/div&gt;
+--
+
+- &lt;div style="text-align: justify"&gt;with another lot of steps (data cleaning, variable choice, algorithms choice) and so on...
+--
+
+- Most importantly, each step requires decisions making based on **ecology theory**, **life history** of the organism to be modeled, and not only technical issues.&lt;/div&gt;
+
+---
+
+### Part 1
+#### What is Ecological niche model?
+##### Broadly applicability
+
+&lt;img src="img/aplic_1.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+---
+### Part 1
+#### What is Ecological niche model?
+##### Broadly applicability
+&lt;img src="img/aplic_2.png" width="90%" style="display: block; margin: auto;" /&gt;
+---
+### Part 1
+#### What is Ecological niche model?
+##### Broadly applicability
+&lt;img src="img/aplic_3.png" width="30%" style="display: block; margin: auto auto auto 0;" /&gt;
+---
+### Part 1
+#### What is Ecological niche model?
+##### Broadly applicability
+&lt;img src="img/aplic_4.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+### Part 2
+#### There are several software and R packages to build ENMs
+&lt;img src="img/pcks.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+### Part 2
+#### modleR: R package a workflow for ENMs
 
 .pull-left[
-## .center[✔️&lt;br&gt;<svg aria-hidden="true" role="img" viewBox="0 0 352 512" style="height:1em;width:0.69em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M336 192h-16c-8.84 0-16 7.16-16 16v48c0 74.8-64.49 134.82-140.79 127.38C96.71 376.89 48 317.11 48 250.3V208c0-8.84-7.16-16-16-16H16c-8.84 0-16 7.16-16 16v40.16c0 89.64 63.97 169.55 152 181.69V464H96c-8.84 0-16 7.16-16 16v16c0 8.84 7.16 16 16 16h160c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16h-56v-33.77C285.71 418.47 352 344.9 352 256v-48c0-8.84-7.16-16-16-16zM176 352c53.02 0 96-42.98 96-96h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H272v-32h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H272v-32h-85.33c-5.89 0-10.67-3.58-10.67-8v-16c0-4.42 4.78-8 10.67-8H272c0-53.02-42.98-96-96-96S80 42.98 80 96v160c0 53.02 42.98 96 96 96z"/></svg>]
+&lt;img src="img/modleR.png" width="60%" style="display: block; margin: auto;" /&gt;
 ]
-
+--
 .pull-right[
-
-## .center[✖️&lt;br&gt;<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M352 288h-16v-88c0-4.42-3.58-8-8-8h-13.58c-4.74 0-9.37 1.4-13.31 4.03l-15.33 10.22a7.994 7.994 0 0 0-2.22 11.09l8.88 13.31a7.994 7.994 0 0 0 11.09 2.22l.47-.31V288h-16c-4.42 0-8 3.58-8 8v16c0 4.42 3.58 8 8 8h64c4.42 0 8-3.58 8-8v-16c0-4.42-3.58-8-8-8zM608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 192c-53.02 0-96-50.15-96-112 0-61.86 42.98-112 96-112s96 50.14 96 112c0 61.87-43 112-96 112zm272 32h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"/></svg>]
+&lt;img src="img/workflow_modleR.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+--
+.pull-left[ Shiny app
+## .center[<svg aria-hidden="true" role="img" viewBox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M592 0H48A48 48 0 0 0 0 48v320a48 48 0 0 0 48 48h240v32H112a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H352v-32h240a48 48 0 0 0 48-48V48a48 48 0 0 0-48-48zm-16 352H64V64h512z"/></svg>]
 ]
 
-???
-
-Richard Stallman summarized the nature of *libre* in a slogan that I'll adapt here
-
-Both meanings of free are relevant here!
-
+--
+&lt;img src="img/shiny_modler.png" width="50%" style="display: block; margin: auto;" /&gt;
 
 ---
-class: middle
 
-# You as a user are "free" to...
-
-
+### Part 3
+#### Challenges
+&lt;p&gt;Related to big data which require power computational performance&lt;/p&gt;
 --
-
-1. .emphasis[RUN]&lt;br&gt;Run the program as you wish, for any purpose.
-
---
-
-1. .emphasis[STUDY]&lt;br&gt;Study how the program works, and change it so it does your computing as you wish. Access to the source code is a precondition for this.
-
---
-
-1. .emphasis[COPY &amp; DISTRIBUTE]&lt;br&gt;Redistribute copies so you can help others.
-
---
-
-1. .emphasis[CHANGE &amp; IMPROVE]&lt;br&gt;Distribute copies of your modified versions to others. By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
-
---
-
-.footnote[https://www.gnu.org/philosophy/free-sw.en.html#f1]
+&lt;img src="img/multiple_sps_1.png" width="45%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
-background-image: url(img/puppy.png)
-background-size: 60%
-background-position: bottom center
-class: top center
-
-
-# "Think free as in a free puppy?"
-
+### Part 3
+#### Challenges
+&lt;p&gt;Related to big data which require power computational performance&lt;/p&gt;
+&lt;img src="img/multiple_sps_2.png" width="90%" style="display: block; margin: auto;" /&gt;
+---
+### Part 3
+#### Challenges
+&lt;p&gt;Related to big data which require power computational performance&lt;/p&gt;
+&lt;img src="img/spatial_resolution.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+---
+### Part 3
+#### Challenges
+&lt;p&gt;Related to big data which require power computational performance&lt;/p&gt;
+&lt;img src="img/times_rcps_gcms.png" width="100%" style="display: block; margin: auto;" /&gt;
+---
+### Part 3
+#### Challenges
+&lt;p&gt; Super computers (remote access), a different ecosystem from local computer user&lt;/p&gt;
+&lt;img src="img/remote access.png" width="50%" style="display: block; margin: auto auto auto 0;" /&gt;
+---
+### Part 3
+#### Challenges
+&lt;p&gt; Super computers (remote access), a different ecosystem from local computer user&lt;/p&gt;
+&lt;img src="img/lncc.png" width="80%" style="display: block; margin: auto auto auto 0;" /&gt;
 
 ---
 class: middle
 
 .pull-left[
-### Scientific &amp; technical computing companies
+### Part 3
 
-Some traditional leaders:
+#### Deal with challenges through...
 
-- SAS Institute (SAS/JMP)
+- Tests with small dataset
 
-- MathWorks (MATLAB)
+- Experience with different OS
 
-- Wolfram Research (Mathematica)
-
-- IBM (SPSS)
+- Multidisciplinary Team
 ]
 
 --
 
 .pull-right[
-### Open source tools for scientific and technical computing 
 
-- SageMath
+## &lt;br /&gt;
 
-- GNU Octave (compatible with Matlab)
+- Help desk
 
-- R 
+- Forums access
 
-- Python / [Project Jupyter](https://jupyter.org/)
-
-- Julia
-]
-
-
-
----
-background-image: url(img/cranes.jpg)
-background-position: left
-background-size: contain
-background-color: #ffffff
-class: middle
-
-.right-column[
-
-# Benefits of FLOSS
-
-- actual functionality
-
-- accessibility
-
-- resiliency
-
-- participatory
-
-- reproducibility
-]
-
-???
-
-A single software vendor is fundamentally incapable of keeping up with the breadth and depth of methodological innovation that occurs in science.
-
----
-background-image: url(img/cranes.jpg)
-background-position: left
-background-size: contain
-background-color: #ffffff
-class: middle
-
-.right-column[
-
-# Reproducibility
-
-&gt; "The baseline requirement for reproducibility is that I can run your software!"
-&gt;
-&gt; [J.J. Allaire](https://youtu.be/DskltmWKOVY)
-
+- Patience
 
 ]
 
 ---
-background-image: url(img/wvu.png)
-background-position: middle
-background-size: contain
+#### Team
 
+&lt;img src="img/team.png" width="100%" style="display: block; margin: auto auto auto 0;" /&gt;
+
+modler team
 ---
-background-image: url(img/wvu_shiny_walkthrough.png)
-background-position: left bottom
-background-size: 55%
-class: bottom, inverse
 
-## "Data Driven WV" helps support vaccine supply &amp; demand with dashboards
+#### Thanks to RNP
 
-.pull-right[
-
-&gt; "In the pandemic’s infancy, the process was done manually using Google Docs and Microsoft Excel spreadsheets."
-
-&gt; "Their ability to use data to forecast PPE and track inventory for vaccines has allowed the state to be ready and nimble to shift with the unpredictable tides of the pandemic."
-]
-
-.footnote[[Article](https://www.wvnews.com/data-science-from-wvu-helping-support-vaccine-supply-demand/article_c5aa5c17-a015-58dd-9d4a-605164010d68.html), [video](https://www.youtube.com/watch?v=CYilc-rEgjg), [walk-through](https://www.youtube.com/watch?v=T2DzDs0ksZY)]
+&lt;img src="img/end.png" width="80%" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
