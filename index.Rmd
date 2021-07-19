@@ -49,19 +49,20 @@ background-color: #ffffff
 ---
 class: middle, center
 
-# What Am I Talk ?
+# What Will I Talk ?
 
-### 1-Ecological niche models, a currently popular approach <br />
-### 2-modleR <br />
-### 3-Computational challanges<br />
+#### Part 1-Ecological niche models, a currently popular approach <br />
+#### Part 2-modleR <br />
+#### Part 3-Computational challanges<br />
 
 ---
 class: inverse, middle, center
-
-# What is Ecological niche models?
+### Part 1
+#### What is Ecological niche model?
 
 ---
-#### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
 ```{r, echo=FALSE, out.width="55%", fig.align="center"}
 knitr::include_graphics("img/ENM_approach_1.png")
@@ -72,7 +73,8 @@ knitr::include_graphics("img/ENM_approach_1.png")
 
 ---
 
-###### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
 ```{r, echo=FALSE, out.width="100%", fig.align="center"}
 knitr::include_graphics("img/Georref_data.png")
@@ -80,7 +82,8 @@ knitr::include_graphics("img/Georref_data.png")
 
 ---
 
-###### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
 ```{r, echo=FALSE, out.width="100%", fig.align="center"}
 knitr::include_graphics("img/Variable_data.png")
@@ -88,19 +91,174 @@ knitr::include_graphics("img/Variable_data.png")
 
 ---
 
-###### What is Ecological niche models? 
+### Part 1
+#### What is Ecological niche model?
 
+.pull-center[
+```{r, echo=FALSE, out.width="45%", fig.align="center"}
+knitr::include_graphics("img/algo_1.png")
+```
+]
+
+---
+
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+```{r, echo=FALSE, out.width="65%", fig.align="center"}
+knitr::include_graphics("img/algo_2.png")
+```
+]
+
+---
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+```{r, echo=FALSE, out.width="95%", fig.align="center"}
+knitr::include_graphics("img/algo_ENMS.png")
+```
+]
+
+---
+### Part 1
+#### What is Ecological niche model?
+
+.pull-center[
+```{r, echo=FALSE, out.width="85%", fig.align="center"}
+knitr::include_graphics("img/algo_G_space.png")
+```
+]
+
+--
+
+- Although we can summarize the process in these 3 steps to a better overall understanding, It's important to emphasize that for each step there are a lot of steps... 
+--
+
+- with another lot of steps (data cleaning, variable choice, algorithms choice) and so on...
+
+--
+- Most importantly, each step requires decisions making based on **ecology theory**, **life history** of the organism to be modelled, and not only technical issues.
+
+---
+
+### Part 2
+#### There are many softawre and R package to build ENMS
+---
+### Part 2
+###### modleR: R package a workflow for ecological niche models
+
+.pull-left[
+```{r, echo=FALSE, out.width="60%", fig.align="center"}
+knitr::include_graphics("img/modleR.png")
+```
+]
+--
+.pull-right[
 ```{r, echo=FALSE, out.width="100%", fig.align="center"}
-knitr::include_graphics("img/Variable_data.png")
+knitr::include_graphics("img/workflow_modleR.png")
+```
+]
+--
+.pull-left[ Shiny app
+## .center[`r fontawesome::fa("tv")`]
+]
+
+--
+```{r, echo=FALSE, out.width="50%", fig.align='center'}
+knitr::include_graphics("img/shiny_modler.png")
+
 ```
 
 ---
-background-image: url(img/donut.png)
-background-size: cover
-class: middle, center
 
-# "Continuação da figura com esquema,<br> not free donuts."
+### Part 3
+#### Challenges
+<p>Related to big data which require power computational performance</p>
+--
+```{r, echo=FALSE, out.width="45%", fig.align='left'}
+knitr::include_graphics("img/multiple_sps_1.png")
+```
 
+---
+### Part 3
+#### Challenges
+<p>Related to big data which require power computational performance</p>
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+knitr::include_graphics("img/multiple_sps_2.png")
+```
+---
+### Part 3
+#### Challenges
+<p>Related to big data which require power computational performance</p>
+```{r, echo=FALSE, out.width="50%", fig.align='left'}
+knitr::include_graphics("img/spatial_resolution.png")
+```
+---
+### Part 3
+#### Challenges
+<p>Related to big data which require power computational performance</p>
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+knitr::include_graphics("img/times_rcps_gcms.png")
+```
+---
+### Part 3
+#### Challenges
+<p> Super computers (remote access), a different ecosystem from local computer user</p>
+```{r, echo=FALSE, out.width="50%", fig.align='left'}
+knitr::include_graphics("img/remote access.png")
+```
+---
+### Part 3
+#### Challenges
+<p> Super computers (remote access), a different ecosystem from local computer user</p>
+```{r, echo=FALSE, out.width="80%", fig.align='left'}
+knitr::include_graphics("img/lncc.png")
+```
+
+---
+class: middle
+
+.pull-left[
+#### Deal with
+
+- Tests with smal dataset
+
+- Experience with different OS
+
+- Multidisciplinary Team
+]
+
+--
+
+.pull-right[
+#### Deal with
+
+- Tests with smal dataset
+
+- Experience with different OS
+
+- Multidisciplinary Team 
+
+]
+
+---
+#### Team
+
+```{r, echo=FALSE, out.width="80%", fig.align='left'}
+knitr::include_graphics("img/team.png")
+```
+
+
+---
+
+background-image: url(img/RNP_2019.png)
+background-size: 60%
+background-position: bottom center
+class: top center
+
+---
 .pull-left[
 ## .center[`r emo::ji("heavy_check_mark")`<br>`r fontawesome::fa("microphone-alt")`]
 ]
@@ -144,11 +302,20 @@ class: middle
 .footnote[https://www.gnu.org/philosophy/free-sw.en.html#f1]
 
 ---
+
 background-image: url(img/puppy.png)
 background-size: 60%
 background-position: bottom center
 class: top center
 
+
+---
+background-image: url(img/end.png)
+background-size: 60%
+background-position: bottom center
+class: top 
+
+---
 
 # "Think free as in a free puppy?"
 
